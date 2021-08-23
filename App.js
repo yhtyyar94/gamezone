@@ -1,9 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState} from 'react';
-import * as Font from 'expo-font'
-import Home from './screens/Home';
+import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading'
-import Navigator from './routes/homeStack'
+import AppNavigator from './routes/Drawer';
 
 const getFonts = () => Font.loadAsync({
     'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
@@ -15,7 +14,7 @@ export default function App() {
 
   if(fontsLoaded) {
     return (
-      <Navigator />
+      <AppNavigator />
     )
   } else {
     return (
